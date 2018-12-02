@@ -1,0 +1,29 @@
+BASE_URL: https://api.ovo.id
+HEADERS:
++++++++++++
+Authorization: eyJhbGciOiJSUzI1NiJ9.eyJleHBpcnlJbk1pbG
+App-Version: 2.4.0
+OS: Android
+Content-Type: application/json; charset=UTF-8
+Host: api.ovo.id
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.11.0
++++++++++++
+
+
+ENDPOINT
++++++++++++
+--SendOtp--
+POST /v2.0/api/auth/customer/login2FA
+Data: {"deviceId":"41162b06-29f8-3d4d-889a-58fd43c980f9","mobile":"0823229394028"}
+
++++++++++++
+--GenerateToken--
+POST /v2.0/api/auth/customer/login2FA/verify
+Data: {"appVersion":"2.4.0","deviceId":"41162b06-29f8-3d4d-889a-58fd43c980f9","macAddress":"00:08:22:4A:1B:5D","mobile":"0823229394028","osName":"android","osVersion":"4.4.2","pushNotificationId":"FCM|eqroh8CpX78:APA91bFTW43f1TPAdEt_6zMzAfHe1oTt5Nw2aVAr3nmlA2Y3wePcGWWERs8RqNHZtCYdcuYTB9T6k7Yzlxvjj6YktDkQCkf7w0GF3ZY5tSp4kFWKeOA0dSfITJiTvxyzVINay-gu2Y4c","refId":"8cbe1069f07a4cc9ba6544a505033ee4","verificationCode":"1234"}
+
++++++++++++
+--LoginSecurityCode--
+POST /v2.0/api/auth/customer/loginSecurityCode/verify
+Data: {"updateAccessToken":"1bb7051171704c3fb2788515061b38cf","securityCode":"123456","deviceUnixtime":1543753309}
